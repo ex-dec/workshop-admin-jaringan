@@ -46,3 +46,15 @@ Struktur direktori dalam sebuah sistem operasi dipengaruhi oleh jenis kernel ter
 9. /run
 
     Direktori ini merupakan pecahan dari direktori /tmp. Direktori ini berisi informasi tentang status dari sebuah aplikasi yang berjalan. Direktori ini disimpan terpisah dengan /tmp karena /tmp bersifat sementara dan akan terhapus setelah sistem operasi direstart. Sedangkan informasi tentang status aplikasi harus tetap bisa diakses meskipun sistem operasi telah mengalami reboot.
+
+10. /tmp
+
+    Direktori tmp sesuai dengan kepanjangannya adalah temporary, digunakan untuk menyimpan file yang bersifat sementara dan dibutuhkan hanya ketika sistem tersebut berjalan. Ketika sistem operasi tersebut di-restart, maka semua file pada direktori tersebut akan hilang.
+
+11. /usr
+
+    usr merupakan direktori untuk menyimpan semua package pada sistem operasi. Disini berbeda dengan /etc karena etc bertugas untuk menyimpan konfigurasi saja.
+
+## C. Perbedaan su dan sudo
+
+su dan sudo merupakan dua hal yang berbeda. su adalah kepanjangan dari "substitute user" yang memiliki definisi perpindahan user. Dari definisi tersebut dapat disimpulkan bahwa su digunakan untuk berpindah ke user yang kita tuju. Parameter dari
