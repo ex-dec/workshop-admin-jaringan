@@ -57,4 +57,36 @@ Struktur direktori dalam sebuah sistem operasi dipengaruhi oleh jenis kernel ter
 
 ## C. Perbedaan su dan sudo
 
-su dan sudo merupakan dua hal yang berbeda. su adalah kepanjangan dari "substitute user" yang memiliki definisi perpindahan user. Dari definisi tersebut dapat disimpulkan bahwa su digunakan untuk berpindah ke user yang kita tuju. Parameter dari
+su dan sudo merupakan dua hal yang berbeda. su adalah kepanjangan dari "substitute user" yang memiliki definisi perpindahan user. Dari definisi tersebut dapat disimpulkan bahwa su digunakan untuk berpindah ke user yang kita tuju. Parameter yang digunakan sebenarnya cukup banyak, namun yang sering digunakan adalah "-". Parameter tersebut merupakan parameter untuk menunjuk user. misal, ketika kita menggunakan perintah "su - user1" , maka kita akan langsung diarahkan ke user1 langsung dengan home directory user tersebut. Jika kita menggunakan parameter tersebut tanpa user yang dituju, maka secara otomatis akan menunjuk user root sebagai tujuannya. 
+
+Sedangkan untuk sudo, merupakan perintah yang digunakan untuk meng eksekusi perintah yang berada dalam satu baris sebagai super user. Jadi meskipun kita tidak masuk sebagai super user, kita tetap bisa mendapatkan privilege sebagai super user.
+
+## D. Jenis Repository
+
+Sebelum kita membahas tentang jenis repository, kita harus mengenal terlebih dahulu apa itu repository.
+Repository merupakan sebuah server yang digunakan untuk menyimpan kumpulan package. Kenapa tidak disebut dengan penyimpanan drive online saja? karena repository dikhususkan untuk menyimpan berkas dalam bentuk kode yang amat banyak. Dibutuhkan protokol tertentu untuk melakukan transfer data agar file yang dikirim tidak hilang sebagian di tengah jalan.
+
+Sekarang kita akan fokus terhadap repository package dari sistem operasi debian. Debian menggunakan package manager "apt". Package manager tersebut digunakan untuk men-download, meng-install, serta meng-hapus package dari sistem operasi debian.
+
+Jenis-jenis dari repository debian dapat kita lihat pada detail repository di /etc/apt/sources.list
+
+![Isi file /etc/apt/sources.list](asset/source-lis.png)
+
+Pada salah satu baris yang tidak ter-disable, kita bisa melihat isiannya adalah 
+
+    deb http://kebo.pens.ac.id/debian bullseye main contrib non-free
+
+rincian pada baris tersebut adalah
+
+deb = jenis package yang akan diambil adalah deb
+
+http://kebo.pens.ac.id/debian = tujuan server yang akan dijadikan tempat download package nya
+
+bullseye = Tipe repository yang akan diambil. Pada opsi ini ada beberapa tipe yaitu bullseye yang berisi package utama, bullseye-updates yang berisi package update bullseye-security untuk package security dari sistem operasi, serta bullseye-backport yang berisi package beta. 
+
+main contrib non-free = Keterangan tersebut adalah identifikasi package yang termasuk dalam kategori package utama, package hasil kontribusi komunitas, atau package yang sifatnya non-oss (closed source).
+
+## E. 
+
+identifikasi jenis repository
+identifikasi perintah apt
