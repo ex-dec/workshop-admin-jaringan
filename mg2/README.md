@@ -86,7 +86,44 @@ bullseye = Tipe repository yang akan diambil. Pada opsi ini ada beberapa tipe ya
 
 main contrib non-free = Keterangan tersebut adalah identifikasi package yang termasuk dalam kategori package utama, package hasil kontribusi komunitas, atau package yang sifatnya non-oss (closed source).
 
-## E. 
+## E. APT Command
 
-identifikasi jenis repository
-identifikasi perintah apt
+Berhubungan dengan bab sebelumnya yang membahas repository, kali ini kita akan membahas command yang menggunakan repository tadi yaitu Package Managernya. Debian menggunakan APT (Advance Package Tool) sebagai default package managernya. Fungsi utama dari package manager yaitu menginstall dan menghapus package pada suatu repository. Namun saat ini package manager berkembang tidak hanya sebagai installer, namun bisa digunakan sebagai monitor package yang ada di sebuah operasi sistem. Kita bisa melihat apa saja package yang sudah terinstall dalam sebuah operasi sistem, apa saja package baru yang ada di repository, dll.
+
+Untuk itu melakukan hal tersebut, maka kita perlu memahami apa saja perintah yang umum digunakan dengan APT.
+
+1. apt install < nama package >
+
+    Perintah tersebut digunakan untuk menginstall sebuah package baru. Apabila kita sudah memiliki package tersebut karena sebelumnya sudah pernah mendownload, maka secara otomatis package yang sudah terdownload akan dipakai. Namun jika kita belum pernah mendownload package tesebut, maka apt akan langsung mendownload dari server repository yang kita miliki.
+
+2. apt remove < name package >
+
+    Perintah ini digunakan untuk menghapus package yang terinstall pada pc kita.
+
+3. apt purge < nama package >
+
+    Perintah ini juga digunakan untuk menghapus package yang ada di pc kita. Namun perintah ini memiliki perbedaan dengan apt remove yaitu dengan menggunakan apt purge, maka file konfigurasi yang berhubungan dengan package tersebut akan ikut terhapus. File konfigurasi tersebut ada di /etc dan secara otomatis ketika kita menginstall package tersebut, maka konfigurasi akan dibuat baru. Berbeda dengan kondisi ketika kita menghapus menggunakan apt remove, file konfigurasi akan tetap ada dan package kita yang sebelumnya sudah kita hapus dan install kembali akan memiliki konfigurasi yang sama seperti sebelum kita menghapusnya.
+
+4. apt list
+
+    Perintah ini digunakan untuk menampilkan semua package yang terindeks oleh package manager kita. Semua package tersebut baik yang sudah terinstall maupun yang belum. Jadi kita bisa melakukan pengecekan terhadap apa saja package yang sudah terinstall pada pc kita.
+
+5. apt search < nama package >
+
+    Jika sebelumnya kita menggunakan apt list untuk menampilkan package yang ter-indeks, maka perintah ini digunakan untuk mencari package tertentu. Dengan menggunakan perintah ini, maka kita bisa fokus ke package yang kita cari. Informasi yang ditampilkan pada perintah untuk juga cukup spesifik dengan deskripsi dari package tersebut.
+
+6. apt update
+
+    Perintah ini merupakan perintah yang berhubungan langsung dengan repository. Perintah ini digunakan untuk meng-update indeks dari sebuah repository. Jadi apabila ada update suatu package, notifikasinya bisa masuk ke pc kita.
+
+7. apt upgrade
+
+    Berbeda dengan perintah sebelumnya. Perintah ini digunakan untuk melakukan upgrade package yang ada update versinya. Namun perintah ini tidak melakukan update terhadap indeks repository yang ada di lokal kita. Jadi sebelum melakukan upgrade, maka pastikan sudah meng-update indeksnya menggunakan apt update.
+
+8. apt dist-upgrade
+
+    perintah ini juga berbeda dengana perintah sebelumnya. Perintah ini kita gunakan apabila terjadi major update pada sistem operasi kita. Jadi semua kebutuhan update dari sistem operasi kita dapat langsung melakukan update.
+
+9. apt autoremove
+
+    Semua package yang terinstall pada sistem kita tidak selamanya akan digunakan. Karena pada kasus tertentu, ada beberapa aplikasi yang memiliki dependency dengan package lain. Ketika ketergantungan tersebut sudah tidak ada, maka package yang tadi sudah terinstall tidak akan digunakan. Maka dari itu ada parameter tambahan yaitu autoremove untuk menghapus semua package yang tidak digunakan atau tidak memiliki ketergantungan dengan package yang lain.
