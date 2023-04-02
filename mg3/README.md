@@ -25,7 +25,7 @@ Tiap minggu ada terdapat backlog yang harus dikerjakan dalam memenuhi target uta
     - [Default Route](#default-route)
     - [Route to Other Network on local](#route-to-other-network-on-local)
     - [DNS](#dns)
-    - [Internet Client](#internet-client)
+    - [DHCP Server untuk Client](#dhcp-server-untuk-client)
     - [Dan berikut konfigurasi lengkapnya](#dan-berikut-konfigurasi-lengkapnya)
 
 <br><br>
@@ -105,9 +105,9 @@ Berikut adalah hasil konfigurasi dns pada mikrotik
 
 ![dns declared on mikrotik](asset/ip%20dns.png)
 
-### Internet Client
+### DHCP Server untuk Client
 
-Untuk _config client_, config yang diterapkan hanya DHCP server karena hal yang belum dikonfigurasi pada _client_ hanya tinggal IP nya saja menggunakan perintah
+Pada saat ini, konfigurasi yang diterapkan hanya DHCP server untuk _client_ menggunakan perintah
 
 ```console
 /ip pool
@@ -117,6 +117,14 @@ add address=192.168.5.0/24 gateway=192.168.5.1
 /ip dhcp-server
 add address-pool=dhcp_pool0 disabled=no interface=ether2 name=dhcp1
 ```
+
+Hasil konfigurasi DHCP server pada client adalah sebagai berikut
+
+![DHCP pool untuk pool ip yang digunakan](asset/ip%20pool.png)
+
+![DHCP Server Network untuk konfigurasi dasar DHCP Server](asset/dhcp%20server%20network.png)
+
+![DHCP Server sendiri untuk implementasi DHCP Servernya](asset/dhcp%20server.png)
 
 <br><br>
 
