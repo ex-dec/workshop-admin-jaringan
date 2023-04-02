@@ -101,4 +101,4 @@ Setelah semua konfigurasi dilakukan, kita bisa mengecek waktu pada mikrotik, jik
 
 ![hasil.png](asset/8.%20hasil%20konfigurasi%20ntp%20client.png)
 
-[def]: #daftar-isi
+[def]: #backlog-minggu-4
