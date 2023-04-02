@@ -147,8 +147,6 @@ add address=192.168.5.1/24 interface=ether2 network=192.168.5.0
 add address=192.168.5.0/24 gateway=192.168.5.1
 /ip dns
 set servers=202.9.85.3
-/ip firewall nat
-add action=masquerade chain=srcnat out-interface=ether1
 /ip route
 add gateway=10.252.108.212
 add gateway=10.252.108.12 network=192.168.2.0/24
