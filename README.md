@@ -10,4 +10,5 @@
 |-|-|
 |[Minggu 2](/mg2/)|Identifikasi|
 |[Minggu 3](/mg3/)|Init Config Router|
-|[Minggu 4](/mg4/)|NTP server and DNS Server Configuration|
+|[Minggu 4](/mg4/)|Server Instalation and NTP Server Configuration|
+|[Minggu 5](/mg5/)|DNS Server Explained
