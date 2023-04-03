@@ -7,7 +7,6 @@ Pada minggu ke-empat ini, kita akan administrasi jaringan pada topologi kemarin.
 - [Konfigurasi Internet Client](#konfigurasi-internet-client)
 - [Instalasi Debian Server](#instalasi-debian-server)
 - [Instalasi NTP Server Debian](#instalasi-ntp-server-debian)
-- [Konfigurasi NTP Client Mikrotik ke Server Debian](#konfigurasi-ntp-client-mikrotik-ke-server-debian)
   - [Membuka file konfigurasi ntp server](#membuka-file-konfigurasi-ntp-server)
   - [Menjalankan ntp](#menjalankan-ntp)
   - [ntp client](#ntp-client)
@@ -50,8 +49,6 @@ Kemudian tunggu proses instalasi sampai berhasil, dan ntp berhasil ter-_install_
 
 ![ntp_instalation.png](asset/1.%20instalasi%20ntp%20server.png)
 
-# Konfigurasi NTP Client Mikrotik ke Server Debian
-
 ## Membuka file konfigurasi ntp server
 
 Untuk membuka file konfigurasi ntp, gunakan perintah
@@ -87,7 +84,7 @@ Kita bisa mengecek tanggal pada terminal kita menggunakan perintah `date`.
 
 ![status_date.png](asset/6.%20status%20date.png)
 
-## ntp client
+## Konfigurasi NTP Client Mikrotik ke Server Debian
 
 selanjutnya kita akan mengkonfigurasi ntp client pada mikrotik kita bisa mengaturnya seperti berikut pada bagian `System -> SNTP Client`, kemudian simpan.
 
