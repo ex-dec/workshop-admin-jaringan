@@ -11,7 +11,7 @@ Pada minggu ke-empat ini, kita akan administrasi jaringan pada topologi kemarin.
   - [Membuka file konfigurasi ntp server](#membuka-file-konfigurasi-ntp-server)
   - [Menjalankan ntp](#menjalankan-ntp)
   - [ntp client](#ntp-client)
-- [Hasil](#hasil)aaa
+- [Hasil](#hasil)
 
 <br>
 
